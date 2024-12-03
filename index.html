@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="quiz-container">
+        
+        <section class="homepage-container">
+            <h1>Matlagningsquiz</h1>
+            <p>Från pizza till paella <br> Hur hungrig är du på kunskap?</p>
+            <div class="name-input">
+                <input 
+                    type="text" 
+                    class="player-name" 
+                    placeholder="Ditt namn"
+                    required
+                    >
+                <button class ="start-btn">Börja Quiz</button>
+            </div>
+        </section>
+
+        
+        <section class="quiz-content hidden">
+            <div class="question-container">
+                <h3 class="question-number">Fråga 1 av 10:</h3>
+                <h2 class="current-question"></h2>
+                <div class="options-container">
+                    <button class="option"></button>
+                    <button class="option"></button>
+                    <button class="option"></button>
+                    <button class="option"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section hidden">
+            <div class="quiz-header">
+                <h2>Quiz avslutat!</h2>
+            </div>
+            <div class="results">
+                <p>Bra jobbat!</p>
+                <p class="final-score"></p>
+                <button class="restart-button">Spela igen</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

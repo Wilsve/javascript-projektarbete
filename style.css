@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(187, 134, 252, 0.5137254902);
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage-container h1 {
+  font-family: "poppins", sans-serif;
+  color: #3700b3;
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.homepage-container p {
+  font-family: "poppins", sans-serif;
+  color: #3700b3;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 20px;
+  text-align: center;
+}
+.homepage-container .name-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.homepage-container .name-input input {
+  width: 200px;
+  height: 30px;
+  border: solid 2px #3700b3;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.homepage-container .name-input button {
+  width: 200px;
+  height: 40px;
+  background-color: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 20px 0px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
