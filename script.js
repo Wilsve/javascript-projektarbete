@@ -96,12 +96,8 @@
     const startButton = document.querySelector('.start-btn');
     const nameInput = document.querySelector('.player-name');
     
-    
-    let currentIndex = 0;
-    let score = 0;
     let playerName = '';
     
-
     startButton.addEventListener('click',() => {
     playerName = nameInput.value;
 
@@ -118,9 +114,54 @@
     const options = document.querySelector('.options-container');
     const questionElement = document.querySelector('.current-question');
     const questionNumber = document.querySelector('.question-number');
-    
-    
-    function questionPage()  {}
+    const questionBtn = document.querySelectorAll('.option-btn');
 
+    let currentIndex = 0;
+
+    function questionPage(){
+    const currentQuestion = questions[currentIndex];
+    questionElement.innerText = currentQuestion.question;
+
+     currentQuestion.options.forEach((option, index) => {
+        
+        questionBtn[index].innerText = option.text;
+        questionBtn[index].addEventListener('click', () => answer(index));
+         
+    });
+}
+
+    let score = 0;  
+
+function answer(index){
+    const currentQuestion = questions[currentIndex];
+
+    questionBtn.forEach(button => {
+        button.disabled = true;
+    });
+
+    if (currentQuestion.options[index].correct) {
+        questionBtn[index].classList.add('correct');
+        score = score + 1;
+    } else {
+        questionBtn[index].classList.add('incorrect');
+        
+    }
+}
+
+function reset(){
+    questionBtn.forEach(button => {
+        button.classList.remove('correct');
+        button.classList.remove('incorrect');
+        button.disabled = false;
+    });
+}
+
+    const nextBtn = document.querySelector('.next-btn');
+    nextBtn.addEventListener('click', () => {
+    reset();
+    currentIndex = currentIndex + 1;
+    questionPage();
+
+    });
     
         
