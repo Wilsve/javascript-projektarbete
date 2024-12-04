@@ -119,6 +119,7 @@
     let currentIndex = 0;
 
     function questionPage(){
+    questionNumber.innerText = `Fråga ${currentIndex + 1} av ${questions.length}`;
     const currentQuestion = questions[currentIndex];
     questionElement.innerText = currentQuestion.question;
 
