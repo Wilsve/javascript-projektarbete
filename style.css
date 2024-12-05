@@ -123,4 +123,54 @@ body {
 }
 .quiz-content .option-btn.incorrect {
   background-color: #CF6679;
+}
+.quiz-content .next-btn {
+  width: 200px;
+  height: 40px;
+  background-color: #03DAC5;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.result-section h2 {
+  font-family: "poppins", sans-serif;
+  color: #3700b3;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+  text-align: center;
+}
+.result-section h3 {
+  font-family: "poppins", sans-serif;
+  color: #3700b3;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  text-align: center;
+}
+.result-section p {
+  font-family: "poppins", sans-serif;
+  color: #3700b3;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  text-align: center;
+}
+.result-section .restart-button {
+  width: 200px;
+  height: 40px;
+  background-color: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 20px 0px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

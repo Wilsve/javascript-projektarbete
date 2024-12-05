@@ -182,8 +182,16 @@ function reset(){
     quizSection.classList.add('hidden');
     resultPage.classList.remove('hidden');
     resultHeader.innerText = 'Quiz Resultat';
-    resultName.innerText = `Bra jobbat ${playerName}!`;
     scoreResult.innerText = `Du fick ${score} av ${questions.length} rätt!`;
+    if (score < 5) {
+        scoreResult.style.color = '#CF6679';
+        resultName.innerText = `Du behöver öva mer, ${playerName}!`;
+    } else if (score <= 7.5) {
+        scoreResult.style.color = '#F28C38';
+        resultName.innerText = `Du är på god väg, ${playerName}!`;
+    } else {
+        scoreResult.style.color = '#03DAC5';
+        resultName.innerText = `Bra jobbat ${playerName}, Du har koll!`;
     }
 
     const restartBtn = document.querySelector('.restart-button');
@@ -192,4 +200,4 @@ function reset(){
     });
     
     
-        
+};

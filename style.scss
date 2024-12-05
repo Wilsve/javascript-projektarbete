@@ -127,4 +127,57 @@ body {
         
       } 
     }
+    .next-btn{
+        width: 200px;
+        height: 40px;
+        background-color: $correct-color;
+        color: #121212;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;     
+        font-family: $font-family;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+.result-section  {
+
+    h2 {
+        font-family: $font-family;
+        color: $light-text-color;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 20px;
+        text-align: center;
+    }
+    h3 {
+        font-family: $font-family;
+        color: $light-text-color;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 20px;
+        text-align: center;
+    }
+    p {
+        font-family: $font-family;
+        color: $light-text-color;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .restart-button {
+        width: 200px;
+        height: 40px;
+        background-color: $light-buttoncolor;
+        color: #121212;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 20px 0px;
+        font-family: $font-family;
+        font-size: 16px;
+        cursor: pointer;
+    
+    }
 }
