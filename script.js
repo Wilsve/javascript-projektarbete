@@ -117,6 +117,10 @@
     const questionBtn = document.querySelectorAll('.option-btn');
 
     let currentIndex = 0;
+    
+    questionBtn.forEach((button, index) => {
+        button.addEventListener('click', () => answer(index));
+    });
 
     function questionPage(){
     questionNumber.innerText = `Fråga ${currentIndex + 1} av ${questions.length}`;
@@ -126,7 +130,6 @@
      currentQuestion.options.forEach((option, index) => {
         
         questionBtn[index].innerText = option.text;
-        questionBtn[index].addEventListener('click', () => answer(index));
          
     });
 }
@@ -161,8 +164,32 @@ function reset(){
     nextBtn.addEventListener('click', () => {
     reset();
     currentIndex = currentIndex + 1;
-    questionPage();
-
+    
+    if (currentIndex < questions.length) {
+        questionPage();
+    } else {
+        result();
+    }
     });
+
+    const resultPage = document.querySelector('.result-section.hidden');
+    const resultHeader = document.querySelector('.result-header');
+    const results = document.querySelector('.results');
+    const resultName = document.querySelector('.result-name');
+    const scoreResult = document.querySelector('.score-result');
+
+    function result (){
+    quizSection.classList.add('hidden');
+    resultPage.classList.remove('hidden');
+    resultHeader.innerText = 'Quiz Resultat';
+    resultName.innerText = `Bra jobbat ${playerName}!`;
+    scoreResult.innerText = `Du fick ${score} av ${questions.length} rätt!`;
+    }
+
+    const restartBtn = document.querySelector('.restart-button');
+    restartBtn.addEventListener('click', () => {
+        location.reload();
+    });
+    
     
         
