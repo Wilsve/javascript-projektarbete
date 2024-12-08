@@ -134,7 +134,10 @@
     });
 }
 
-    let score = 0;  
+    let score = 0;
+
+    const correctResult = [];
+    const wrongResult = [];
 
 function answer(index){
     const currentQuestion = questions[currentIndex];
@@ -146,11 +149,13 @@ function answer(index){
     if (currentQuestion.options[index].correct) {
         questionBtn[index].classList.add('correct');
         score = score + 1;
+        correctResult.push(`Fråga ${currentIndex + 1}: ${questions[currentIndex].options[index].text}`);
     } else {
         questionBtn[index].classList.add('incorrect');
-        
+        wrongResult.push(`Fråga ${currentIndex + 1}: ${questions[currentIndex].options[index].text}`);
     }
 }
+
 
 function reset(){
     questionBtn.forEach(button => {
@@ -161,6 +166,7 @@ function reset(){
 }
 
     const nextBtn = document.querySelector('.next-btn');
+    
     nextBtn.addEventListener('click', () => {
     reset();
     currentIndex = currentIndex + 1;
@@ -181,7 +187,7 @@ function reset(){
     function result (){
     quizSection.classList.add('hidden');
     resultPage.classList.remove('hidden');
-    resultHeader.innerText = 'Quiz Resultat';
+    resultHeader.innerText = 'Quiz Avslutat!';
     scoreResult.innerText = `Du fick ${score} av ${questions.length} rätt!`;
     if (score < 5) {
         scoreResult.style.color = '#CF6679';
@@ -193,6 +199,21 @@ function reset(){
         scoreResult.style.color = '#03DAC5';
         resultName.innerText = `Bra jobbat ${playerName}, Du har koll!`;
     }
+    
+    const ul = document.querySelector('ul');
+
+    correctResult.forEach((result, index) => {
+        const li = document.createElement('li');
+        li.innerText = ` ${result}`;
+        li.style.color = '#03DAC5';
+        ul.appendChild(li);
+    });
+    wrongResult.forEach((result, index) => {
+        const li = document.createElement('li');
+        li.innerText = `${result}`;
+        li.style.color = '#CF6679';
+        ul.appendChild(li);
+    });
 
     const restartBtn = document.querySelector('.restart-button');
     restartBtn.addEventListener('click', () => {
