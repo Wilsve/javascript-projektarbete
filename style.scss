@@ -12,6 +12,9 @@ body {
   height: 100vh;
   background-color: #bb86fc83;
 }
+.dark-mode {
+  background-color: $dark-bodycolor;
+}
 .quiz-container {
     display: flex;
     flex-direction: column;
@@ -23,6 +26,10 @@ body {
     padding: 20px;
     border-radius: 10px
     
+
+}
+.dark-mode .quiz-container {
+    background-color: $dark-backgroundcolor;
 }
 .homepage-container {
     display: flex;
@@ -76,6 +83,25 @@ body {
         }
     }
 }
+.dark-mode .homepage-container {
+    h1 {
+        color: $dark-text-color;
+    }
+    p {
+        color: $dark-text-color;
+    }
+    .name-input {
+        input {
+            border: solid 2px $dark-text-color;
+            background-color: $dark-backgroundcolor;
+            color: $dark-text-color;
+        }
+        button {
+            background-color: $dark-buttoncolor;
+            color: white;
+        }
+    }
+}
 .hidden {
     display: none;
 }
@@ -104,6 +130,7 @@ body {
             text-align: center;
         }
     }
+
     .option-btn {
         display: block;
         width: 200px;
@@ -126,6 +153,25 @@ body {
         background-color: $incorrect-color;
         
       } 
+    }
+    .dark-mode & .option-btn {
+        background-color: $dark-buttoncolor;
+        color: white;
+        
+        &.correct {
+            background-color: $correct-color;
+        }
+        &.incorrect {
+            background-color: $incorrect-color;
+        }
+    }
+    .dark-mode & .question-container {
+        h2 {
+            color: $dark-text-color;
+        }
+        h3 {
+            color: $dark-text-color;
+        }
     }
     .next-btn{
         width: 200px;
@@ -193,6 +239,26 @@ body {
             margin-top: 20px;
             text-align: center;
             text-decoration: none;
+        }
+    }
+}
+.dark-mode .result-section {
+    h2 {
+        color: $dark-text-color;
+    }
+    h3 {
+        color: $dark-text-color;
+    }
+    p {
+        color: $dark-text-color;
+    }
+    .restart-button {
+        background-color: $dark-buttoncolor;
+        color: white;
+    }
+    .result-list {
+        li {
+            color: $dark-text-color;
         }
     }
 }

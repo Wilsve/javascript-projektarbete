@@ -95,6 +95,11 @@
     const quizSection = document.querySelector('.quiz-content.hidden');
     const startButton = document.querySelector('.start-btn');
     const nameInput = document.querySelector('.player-name');
+    const darkMode = document.querySelector('.darkmode');
+
+    darkMode.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
     
     let playerName = '';
     
