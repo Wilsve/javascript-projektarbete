@@ -9,12 +9,10 @@
             ]
         },
         {
-            question: "Vad är huvudingredienserna i en klassisk gazpacho?",
+            question: "I Italien anses det ofint att dricka cappuccino efter lunch.",
             options: [
-                { text: "Potatis och purjolök", correct: false },
-                { text: "Gurka och tomat", correct: true },
-                { text: "Morot och selleri", correct: false },
-                { text: "Spenat och zucchini", correct: false }
+                { text: "Falskt", correct: false },
+                { text: "Sant", correct: true },
             ]
         },
         {
@@ -36,12 +34,10 @@
             ]
         },
         {
-            question: "Vilken grönsak är huvudingrediensen i moussaka?",
+            question: "Avokado är egentligen en grönsak.",
             options: [
-                { text: "Zucchini", correct: false },
-                { text: "Potatis", correct: false },
-                { text: "Aubergine", correct: true },
-                { text: "Paprika", correct: false }
+                { text: "Falskt", correct: true },
+                { text: "Sant", correct: false },
             ]
         },
         {
@@ -54,12 +50,10 @@
             ]
         },
         {
-            question: "Vad heter det franska bakverket som är gjort av smördeg och fyllt med choklad?",
+            question: "Pasta uppfanns ursprungligen i Kina, inte i Italien.",
             options: [
-                { text: "Croissant", correct: false },
-                { text: "Pain au chocolat", correct: true },
-                { text: "Brioche", correct: false },
-                { text: "Éclair", correct: false }
+                { text: "Falskt", correct: false },
+                { text: "Sant", correct: true },
             ]
         },
         {
@@ -109,33 +103,34 @@
     if (playerName === '') {
         alert('Vänligen skriv in ditt namn');
         return;
-    }
+    } else {
     homePage.classList.add('hidden');
     quizSection.classList.remove('hidden'); 
-
-    questionPage();
+    questionPage();}
 });
 
     const options = document.querySelector('.options-container');
     const questionElement = document.querySelector('.current-question');
     const questionNumber = document.querySelector('.question-number');
-    const questionBtn = document.querySelectorAll('.option-btn');
-
+    let questionBtn = [];
     let currentIndex = 0;
     
-    questionBtn.forEach((button, index) => {
-        button.addEventListener('click', () => answer(index));
-    });
-
     function questionPage(){
+
+    options.innerHTML = '';
+    questionBtn = [];
+
     questionNumber.innerText = `Fråga ${currentIndex + 1} av ${questions.length}`;
     const currentQuestion = questions[currentIndex];
     questionElement.innerText = currentQuestion.question;
 
      currentQuestion.options.forEach((option, index) => {
-        
-        questionBtn[index].innerText = option.text;
-         
+        const button = document.createElement('button');
+        button.classList.add('option-btn');
+        button.innerText = option.text;
+        button.addEventListener('click', () => answer(index));
+        options.appendChild(button);
+        questionBtn.push(button);
     });
 }
 

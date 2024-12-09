@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background-color: #bb86fc83;
   
+  
 }
 .dark-mode {
   background-color: $dark-bodycolor;
@@ -22,10 +23,11 @@ body {
     justify-content: center;
     align-items: center;
     width: 350px;
-    height: auto;
+    height: 500px;
     background-color: $light-backgroundcolor;
     padding: 20px;
     border-radius: 10px;
+    
 
     .darkmode {  
         position: absolute;
@@ -156,7 +158,6 @@ body {
             color: $light-text-color;
             font-size: 16px;
             font-weight: 300;
-            margin-top: 20px;
             text-align: center;
         }
     }
@@ -213,10 +214,13 @@ body {
         padding: 5px 10px;     
         font-family: $font-family;
         font-size: 16px;
+        margin-bottom: 20px;
         cursor: pointer;
     }
 }
 .result-section  {
+
+    
 
     h2 {
         font-family: $font-family;
@@ -263,26 +267,31 @@ body {
         align-items: center;
        
         li {
+            list-style: none;
             font-family: $font-family;
             font-size: 16px;
             font-weight: 300;
-            margin-top: 20px;
             text-align: center;
             text-decoration: none;
         }
     }
     .result-button {
-        width: 200px;
-        height: 40px;
         background-color: $light-buttoncolor;
         color: #121212;
         border: none;
         border-radius: 5px;
         padding: 5px 10px;
         margin-top: 10px;
+        margin-bottom: 10px;
         font-family: $font-family;
         font-size: 16px;
         cursor: pointer;
+    }
+    .results {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 .dark-mode .result-section {
@@ -308,4 +317,5 @@ body {
             color: $dark-text-color;
         }
     }
+    
 }
