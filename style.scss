@@ -11,6 +11,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #bb86fc83;
+  
 }
 .dark-mode {
   background-color: $dark-bodycolor;
@@ -22,14 +23,42 @@ body {
     align-items: center;
     width: 350px;
     height: auto;
-    background-color:$light-backgroundcolor;
+    background-color: $light-backgroundcolor;
     padding: 20px;
-    border-radius: 10px
-    
+    border-radius: 10px;
 
+    .darkmode {  
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+
+        svg {
+            width: 24px; 
+            height: 24px;
+            fill: darkgray;
+        }
+    }
+    .sun-icon {
+        display: none;
+    }
+    .moon-icon {
+        display: block;
+    }
 }
+
 .dark-mode .quiz-container {
     background-color: $dark-backgroundcolor;
+
+    .sun-icon {
+        display: block;
+    }
+    .moon-icon {
+        display: none;
+    }
 }
 .homepage-container {
     display: flex;
@@ -67,6 +96,7 @@ body {
             font-family: $font-family;
             font-size: 16px;
             margin-top: 10px;
+            color: $light-text-color;
         }
         button {
             width: 200px;
@@ -241,6 +271,19 @@ body {
             text-decoration: none;
         }
     }
+    .result-button {
+        width: 200px;
+        height: 40px;
+        background-color: $light-buttoncolor;
+        color: #121212;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+        font-family: $font-family;
+        font-size: 16px;
+        cursor: pointer;
+    }
 }
 .dark-mode .result-section {
     h2 {
@@ -253,6 +296,10 @@ body {
         color: $dark-text-color;
     }
     .restart-button {
+        background-color: $dark-buttoncolor;
+        color: white;
+    }
+    .result-button {
         background-color: $dark-buttoncolor;
         color: white;
     }

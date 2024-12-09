@@ -27,9 +27,35 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
+.quiz-container .darkmode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.quiz-container .darkmode svg {
+  width: 24px;
+  height: 24px;
+  fill: darkgray;
+}
+.quiz-container .sun-icon {
+  display: none;
+}
+.quiz-container .moon-icon {
+  display: block;
+}
 
 .dark-mode .quiz-container {
   background-color: #121212;
+}
+.dark-mode .quiz-container .sun-icon {
+  display: block;
+}
+.dark-mode .quiz-container .moon-icon {
+  display: none;
 }
 
 .homepage-container {
@@ -69,6 +95,7 @@ body {
   font-family: "poppins", sans-serif;
   font-size: 16px;
   margin-top: 10px;
+  color: #3700b3;
 }
 .homepage-container .name-input button {
   width: 200px;
@@ -228,6 +255,19 @@ body {
   text-align: center;
   text-decoration: none;
 }
+.result-section .result-button {
+  width: 200px;
+  height: 40px;
+  background-color: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 .dark-mode .result-section h2 {
   color: #bb86fc;
@@ -239,6 +279,10 @@ body {
   color: #bb86fc;
 }
 .dark-mode .result-section .restart-button {
+  background-color: #3700b3;
+  color: white;
+}
+.dark-mode .result-section .result-button {
   background-color: #3700b3;
   color: white;
 }

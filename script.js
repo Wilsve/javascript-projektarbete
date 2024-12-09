@@ -205,20 +205,32 @@ function reset(){
         resultName.innerText = `Bra jobbat ${playerName}, Du har koll!`;
     }
     
-    const ul = document.querySelector('ul');
+    const ul = document.querySelector('.result-list');
+    const resultBtn = document.querySelector('.result-button');
+  
 
-    correctResult.forEach((result, index) => {
+resultBtn.addEventListener('click', () => {
+    
+    ul.textContent = '';
+  
+    
+    correctResult.forEach((result) => {
         const li = document.createElement('li');
         li.innerText = ` ${result}`;
         li.style.color = '#03DAC5';
         ul.appendChild(li);
     });
-    wrongResult.forEach((result, index) => {
+    wrongResult.forEach((result) => {
         const li = document.createElement('li');
         li.innerText = `${result}`;
         li.style.color = '#CF6679';
         ul.appendChild(li);
     });
+});
+    
+    
+        
+ 
 
     const restartBtn = document.querySelector('.restart-button');
     restartBtn.addEventListener('click', () => {
