@@ -25,7 +25,7 @@
             ]
         },
         {
-            question: "Vilket spanskt risbaserat maträtt innehåller ofta skaldjur, kyckling och saffran?",
+            question: "Vilken spansk risbaserad maträtt innehåller ofta skaldjur, kyckling och saffran?",
             options: [
                 { text: "Paella", correct: true },
                 { text: "Risotto", correct: false },
@@ -196,13 +196,13 @@ function reset(){
     resultHeader.innerText = 'Quiz Avslutat!';
     scoreResult.innerText = `Du fick ${score} av ${questions.length} rätt!`;
     if (score < 5) {
-        scoreResult.style.color = '#CF6679';
+        scoreResult.style.color = '#b1213bc7';
         resultName.innerText = `Du behöver öva mer, ${playerName}!`;
     } else if (score <= 7.5) {
         scoreResult.style.color = '#F28C38';
         resultName.innerText = `Du är på god väg, ${playerName}!`;
     } else {
-        scoreResult.style.color = '#03DAC5';
+        scoreResult.style.color = '#03da8fc9';
         resultName.innerText = `Bra jobbat ${playerName}, Du har koll!`;
     }
     
@@ -221,13 +221,13 @@ resultBtn.addEventListener('click', () => {
     correctResult.forEach((result) => {
         const li = document.createElement('li');
         li.innerText = ` ${result}`;
-        li.style.color = '#03DAC5';
+        li.style.color = '#03da8fc9';
         ulRight.appendChild(li);
     });
     wrongResult.forEach((result) => {
         const li = document.createElement('li');
         li.innerText = `${result}`;
-        li.style.color = '#CF6679';
+        li.style.color = '#b1213bc7';
         ulWrong.appendChild(li);
     });
 });

@@ -12,22 +12,25 @@ body {
   height: 100vh;
   background-color: #bb86fc83;
 }
-.light-video  {
+.light-video, .dark-video {
     position: fixed;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
     z-index: -1;
+    display: block;
 }
+
 .dark-video {
     display: none;
 }
+
 .dark-mode .light-video {
     display: none;
 }
+
 .dark-mode .dark-video {
     display: block;
-    position: fixed;
-    width: 100%;
-    z-index: -1;
 }
 .dark-mode {
   background-color: $dark-bodycolor;
@@ -105,6 +108,7 @@ body {
         align-items: center;
         margin-top: 20px;
         input {
+            background: $light-backgroundcolor;
             width: 200px;
             height: 30px;
             border: solid 2px $light-text-color;
