@@ -93,7 +93,13 @@
 
     darkMode.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
+        const isDarkmodeActive = document.body.classList.contains('dark-mode');
+        localStorage.setItem ('darkMode', isDarkmodeActive);
     });
+
+        if (localStorage.getItem('darkMode') === 'true'){
+            document.body.classList.add('dark-mode');
+        }
     
     let playerName = '';
     

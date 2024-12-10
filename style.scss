@@ -11,8 +11,23 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #bb86fc83;
-  
-  
+}
+.light-video  {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+.dark-video {
+    display: none;
+}
+.dark-mode .light-video {
+    display: none;
+}
+.dark-mode .dark-video {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
 }
 .dark-mode {
   background-color: $dark-bodycolor;
@@ -23,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 350px;
-    height: 500px;
+    
     background-color: $light-backgroundcolor;
     padding: 20px;
     border-radius: 10px;
@@ -216,6 +231,10 @@ body {
         font-size: 16px;
         margin-bottom: 20px;
         cursor: pointer;
+    }
+    .dark-mode & .next-btn {
+        
+        color: white;
     }
 }
 .result-section  {
