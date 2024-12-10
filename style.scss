@@ -38,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 350px;
-    
+    box-shadow: 3px 5px 10px 5px rgba(0,0,0,0.75);
     background-color: $light-backgroundcolor;
     padding: 20px;
     border-radius: 10px;
@@ -152,6 +152,9 @@ body {
 .hidden {
     display: none;
 }
+.hidden-2 {
+    display: none;
+}
 .quiz-content {
     .question-container {
         display: flex;
@@ -262,7 +265,7 @@ body {
         color: $light-text-color;
         font-size: 16px;
         font-weight: 300;
-        margin-top: 20px;
+        margin-top: 5px;
         text-align: center;
     }
     .restart-button {
@@ -279,7 +282,7 @@ body {
         cursor: pointer;
     
     }
-    .result-list {
+    .result-list-right, .result-list-wrong {
         display: flex;
         flex-direction: column;
         justify-content: center;
