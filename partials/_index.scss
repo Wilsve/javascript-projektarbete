@@ -58,6 +58,10 @@
               width: 24px; 
               height: 24px;
               fill: darkgray;
+              &:hover {
+                fill: lighten(darkgray, 20%);
+                transition: all 0.2s ease-in-out;
+              }
           }
       }
       .sun-icon {

@@ -63,6 +63,10 @@ body {
   height: 24px;
   fill: darkgray;
 }
+.quiz-container .darkmode svg:hover {
+  fill: gainsboro;
+  transition: all 0.2s ease-in-out;
+}
 .quiz-container .sun-icon {
   display: none;
 }
