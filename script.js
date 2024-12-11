@@ -148,7 +148,7 @@
 function answer(index){
     const currentQuestion = questions[currentIndex];
 
-    questionBtn.forEach(button => {
+questionBtn.forEach(button => {
         button.disabled = true;
     });
 
@@ -173,7 +173,7 @@ function reset(){
 
     const nextBtn = document.querySelector('.next-btn');
     
-    nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener('click', () => {
     reset();
     currentIndex = currentIndex + 1;
     
@@ -190,7 +190,7 @@ function reset(){
     const resultName = document.querySelector('.result-name');
     const scoreResult = document.querySelector('.score-result');
 
-    function result (){
+function result (){
     quizSection.classList.add('hidden');
     resultPage.classList.remove('hidden');
     resultHeader.innerText = 'Quiz Avslutat!';
@@ -224,6 +224,12 @@ resultBtn.addEventListener('click', () => {
         li.style.color = '#03da8fc9';
         ulRight.appendChild(li);
     });
+    if (wrongResult.length === 0) {
+        pResult[1].classList.add('hidden-2');
+    }
+    if (correctResult.length === 0) {
+        pResult[0].classList.add('hidden-2');
+    }
     wrongResult.forEach((result) => {
         const li = document.createElement('li');
         li.innerText = `${result}`;
@@ -233,13 +239,8 @@ resultBtn.addEventListener('click', () => {
 });
     
     
-        
- 
-
     const restartBtn = document.querySelector('.restart-button');
     restartBtn.addEventListener('click', () => {
         location.reload();
     });
-    
-    
 };

@@ -96,7 +96,7 @@ body {
 .homepage-container p {
   font-family: "poppins", sans-serif;
   color: #3700b3;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   margin-top: 20px;
   text-align: center;
@@ -133,6 +133,10 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+.homepage-container .name-input button:hover {
+  background-color: #9f54fb;
+  transition: all 0.2s ease-in-out;
+}
 
 .dark-mode .homepage-container h1 {
   color: #bb86fc;
@@ -148,6 +152,10 @@ body {
 .dark-mode .homepage-container .name-input button {
   background-color: rgba(54, 0, 179, 0.6470588235);
   color: white;
+}
+.dark-mode .homepage-container .name-input button:hover {
+  background-color: rgba(39, 0, 128, 0.6470588235);
+  transition: all 0.2s ease-in-out;
 }
 
 .hidden {
@@ -195,6 +203,10 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+.quiz-content .option-btn:hover {
+  background-color: #9f54fb;
+  transition: all 0.2s ease-in-out;
+}
 .quiz-content .option-btn.correct {
   background-color: rgba(3, 218, 143, 0.7882352941);
 }
@@ -204,6 +216,10 @@ body {
 .dark-mode .quiz-content .option-btn {
   background-color: rgba(54, 0, 179, 0.6470588235);
   color: white;
+}
+.dark-mode .quiz-content .option-btn:hover {
+  background-color: rgba(39, 0, 128, 0.6470588235);
+  transition: all 0.2s ease-in-out;
 }
 .dark-mode .quiz-content .option-btn.correct {
   background-color: rgba(3, 218, 143, 0.7882352941);
@@ -229,6 +245,10 @@ body {
   font-size: 16px;
   margin-bottom: 20px;
   cursor: pointer;
+}
+.quiz-content .next-btn:hover {
+  background-color: rgba(2, 168, 110, 0.7882352941);
+  transition: all 0.2s ease-in-out;
 }
 .dark-mode .quiz-content .next-btn {
   color: white;
@@ -271,6 +291,10 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+.result-section .restart-button:hover {
+  background-color: #9f54fb;
+  transition: all 0.2s ease-in-out;
+}
 .result-section .result-list-right, .result-section .result-list-wrong {
   display: flex;
   flex-direction: column;
@@ -297,6 +321,10 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+.result-section .result-button:hover {
+  background-color: #9f54fb;
+  transition: all 0.2s ease-in-out;
+}
 .result-section .results {
   display: flex;
   flex-direction: column;
@@ -317,9 +345,17 @@ body {
   background-color: rgba(54, 0, 179, 0.6470588235);
   color: white;
 }
+.dark-mode .result-section .restart-button:hover {
+  background-color: rgba(39, 0, 128, 0.6470588235);
+  transition: all 0.2s ease-in-out;
+}
 .dark-mode .result-section .result-button {
   background-color: rgba(54, 0, 179, 0.6470588235);
   color: white;
+}
+.dark-mode .result-section .result-button:hover {
+  background-color: rgba(39, 0, 128, 0.6470588235);
+  transition: all 0.2s ease-in-out;
 }
 .dark-mode .result-section .result-list li {
   color: #bb86fc;
